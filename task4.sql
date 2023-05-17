@@ -1,4 +1,3 @@
---В какие города летали пассажиры с самой высокой стоимостью бронирования?
 select arrival_city from bookings as b
 join tickets t on b.book_ref = t.book_ref
 join ticket_flights tf on t.ticket_no = tf.ticket_no 
