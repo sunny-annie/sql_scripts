@@ -1,5 +1,5 @@
 SELECT
-	arrival_city
+	DISTINCT arrival_city
 FROM
 	bookings AS b
 JOIN tickets t ON
