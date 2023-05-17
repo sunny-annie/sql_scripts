@@ -1,3 +1,13 @@
-select distinct arrival_city, amount from flights_v fv 
-join ticket_flights tf on tf.flight_id = fv.flight_id
-where tf.amount = (select min(ticket_flights.amount) from ticket_flights);
+SELECT
+	DISTINCT arrival_city,
+	amount
+FROM
+	flights_v fv
+JOIN ticket_flights tf ON
+	tf.flight_id = fv.flight_id
+WHERE
+	tf.amount = (
+	SELECT
+		min(ticket_flights.amount)
+	FROM
+		ticket_flights);

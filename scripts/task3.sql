@@ -1,3 +1,7 @@
-select * from bookings b
-order by total_amount desc 
-limit 10;
+SELECT
+	*
+FROM
+	bookings b
+ORDER BY
+	total_amount DESC
+LIMIT 10;

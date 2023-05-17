@@ -1,4 +1,11 @@
-select arrival_city, count(*) as count from flights_v fv  
-where departure_city = 'Москва'
-group by arrival_city
-order by count desc; 
+SELECT
+	arrival_city,
+	count(*) AS count
+FROM
+	flights_v fv
+WHERE
+	departure_city = 'Москва'
+GROUP BY
+	arrival_city
+ORDER BY
+	count DESC; 

@@ -1,3 +1,13 @@
-select distinct to_char(scheduled_departure, 'month') as departure_month, arrival_city, count(*) AS flights_qty from flights_v fv
-group by departure_month, arrival_city 
-order by departure_month asc, flights_qty desc;
+SELECT
+	DISTINCT to_char(scheduled_departure,
+	'month') AS departure_month,
+	arrival_city,
+	count(*) AS flights_qty
+FROM
+	flights_v fv
+GROUP BY
+	departure_month,
+	arrival_city
+ORDER BY
+	departure_month ASC,
+	flights_qty DESC;

@@ -1,3 +1,9 @@
-select distinct arrival_city, to_char(scheduled_departure_local, 'Day') as weekday_name, 
-(scheduled_arrival - scheduled_departure) AS flight_time from flights_v as fv
-where departure_city = 'Волгоград';
+SELECT
+	DISTINCT arrival_city,
+	to_char(scheduled_departure_local,
+	'Day') AS weekday_name,
+	(scheduled_arrival - scheduled_departure) AS flight_time
+FROM
+	flights_v AS fv
+WHERE
+	departure_city = 'Волгоград';

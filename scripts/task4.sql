@@ -1,6 +1,13 @@
-select arrival_city from bookings as b
-join tickets t on b.book_ref = t.book_ref
-join ticket_flights tf on t.ticket_no = tf.ticket_no 
-join flights_v fv  on tf.flight_id = fv.flight_id 
-order by total_amount desc 
-limit 10;
+SELECT
+	arrival_city
+FROM
+	bookings AS b
+JOIN tickets t ON
+	b.book_ref = t.book_ref
+JOIN ticket_flights tf ON
+	t.ticket_no = tf.ticket_no
+JOIN flights_v fv ON
+	tf.flight_id = fv.flight_id
+ORDER BY
+	total_amount DESC
+LIMIT 10;

@@ -1,6 +1,14 @@
-select seat_no, count(*) AS count from ticket_flights tf 
-join boarding_passes bp on tf.ticket_no = bp.ticket_no 
-where fare_conditions = 'Business'
-group by seat_no
-order by count desc
-limit 10;
+SELECT
+	seat_no,
+	count(*) AS count
+FROM
+	ticket_flights tf
+JOIN boarding_passes bp ON
+	tf.ticket_no = bp.ticket_no
+WHERE
+	fare_conditions = 'Business'
+GROUP BY
+	seat_no
+ORDER BY
+	count DESC
+LIMIT 10;

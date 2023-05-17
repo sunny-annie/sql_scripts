@@ -1,5 +1,11 @@
-select * from flights_v fv 
-where departure_city = 'Екатеринбург' and arrival_city = 'Москва' 
-and scheduled_departure  > bookings.now()
-order by scheduled_departure asc
-limit 1;
+SELECT
+	*
+FROM
+	flights_v fv
+WHERE
+	departure_city = 'Екатеринбург'
+	AND arrival_city = 'Москва'
+	AND scheduled_departure > bookings.now()
+ORDER BY
+	scheduled_departure ASC
+LIMIT 1;
